@@ -160,6 +160,11 @@ class MedicalKeywordProcessor:
                 for word, score in words:
                     print(f"  - {word} (score: {score:.4f})")
 
+def extract_and_categorize(text: str):
+    extractor = MedicalKeywordExtractor()
+    keywords = extractor.extract_keywords(text)
+    categorized = extractor.categorize_keywords(keywords)
+    return categorized
 
 def main():
     processor = MedicalKeywordProcessor()
