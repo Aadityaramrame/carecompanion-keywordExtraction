@@ -3,6 +3,10 @@ from MedicalKeywordExtractor import extract_and_categorize
 
 app = Flask(__name__)
 
+@app.route("/")
+def home():
+    return "🚀 Keyword Extraction App is running!"
+
 @app.route('/extract_keywords', methods=['POST'])
 def extract_keywords():
     data = request.get_json()
