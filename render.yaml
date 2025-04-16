@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: carecompanion-keywordextractor
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+      python -m spacy download en_core_web_sm
+    startCommand: python _app.py
+    plan: free
