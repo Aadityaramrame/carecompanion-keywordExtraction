@@ -1,4 +1,4 @@
-streamlit
+flask
 spacy
 scikit-learn
 # spaCy model needed during build
