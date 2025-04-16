@@ -17,4 +17,6 @@ def extract_keywords():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-    app.run(port=10001)  # You can use any port you want
+    import os
+    port = int(os.environ.get("PORT", 10000))  
+    app.run(host="0.0.0.0", port=port)         
